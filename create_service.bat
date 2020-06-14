@@ -1,0 +1,1 @@
+sc.exe create my_service type= own type= interact start= delayed-auto error= ignore binpath= "D:\my_service.exe" displayname= "Application Management"
