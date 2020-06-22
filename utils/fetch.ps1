@@ -1,4 +1,4 @@
-# usage: powershell -File $fetch.ps1
+# usage: powershell -File fetch.ps1
 
 param([string]$remote="https://raw.githubusercontent.com/LOLBAS-Project/LOLBAS/master/README.md", [string]$local=($remote).Basename)
 
