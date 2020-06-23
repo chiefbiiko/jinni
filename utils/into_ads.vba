@@ -1,23 +1,5 @@
 Dim vbProj As VBIDE.VBProject
-vbProj.References.AddFromFile "C:\Windows\System32\msxml6.dll" 'vbscript.dll\3"
-
-Private Function EncodeBase64(ByRef arrData() As Byte) As String
-    Dim objXML As MSXML6.DOMDocument
-    Dim objNode As MSXML6.IXMLDOMElement
-   
-    ' help from MSXML
-    Set objXML = New MSXML6.DOMDocument
-   
-    ' byte array to base64
-    Set objNode = objXML.createElement("b64")
-    objNode.dataType = "bin.base64"
-    objNode.nodeTypedValue = arrData
-    EncodeBase64 = objNode.Text
-
-    ' thanks, bye
-    Set objNode = Nothing
-    Set objXML = Nothing
-End Function
+vbProj.References.AddFromFile "C:\Windows\System32\msxml6.dll"
 
 Private Function DecodeBase64(ByVal strData As String) As Byte()
     Dim objXML As MSXML6.DOMDocument
